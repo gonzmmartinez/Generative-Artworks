@@ -1,13 +1,13 @@
 # Index
 1. [Introduction](#introduction)
 
-  1.1 [But... why?](#Butwhy)
+1.1 [But... why?](#Butwhy)
 
 2. [The project](#the_project)
 
-  2.1 [Drawing.py](#drawing)
+2.1 [Drawing.py](#drawing)
 
-  2.2 [GenerativeArtworks.py](#generativeartworks)
+2.2 [GenerativeArtworks.py](#generativeartworks)
 
 3. [Results](#results)
 
@@ -55,7 +55,7 @@ For example:
   <img src="Drawings/Imanu_drawing.png">
 </p>
 
-## GenerativeArtworks.py
+## [GenerativeArtworks.py](GenerativeArtworks.py)
 <a id="generativeartworks"></a>
 
 The code starts by importing necessary libraries such as `os`, `random`, `mutagen`, `csv`, `Drawing.py` and `PIL`. Then, the code sets a directory path to a folder containing music files.
