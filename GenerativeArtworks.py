@@ -4,7 +4,7 @@ import random
 from mutagen.easyid3 import EasyID3
 import csv
 from Drawing import generate_art
-from PIL import Image
+from PIL import Image, ImageEnhance
 
 # set the directory path
 path = 'E:\Musika' # here's where I save my music
@@ -38,15 +38,28 @@ with open(filename, 'w', newline='') as file:
     # write the row of data to the CSV file
     writer.writerow(artist_names)
 
-lista = range(25)
+used_nums = [] # create a list to save all the used numbers to avoid repetition
 
+# generate artworks
 for artist in artist_names:
     generate_art(f"E:\Code\Projects\Generative_Artworks\Drawings\{artist}_drawing.png",artist)
 
+    # generate a random number and add it to a list with used numbers
+    while True:
+        random_num = random.randint(1, 25)  # generate a random number between 1 and 25
+        if random_num not in used_nums:  # check if the number has not been used
+            used_nums.append(random_num)  # add the number to the list of used numbers
+            break  # exit the while loop if a valid number is found
+
+    print(f"{artist}: {random_num}")
+
     # load the two images
-    random_num = random.randint(1,25)
     background_image = Image.open(f"E:\Code\Projects\Generative_Artworks\Screenshots\Batch\{random_num}.png")
     foreground_image = Image.open(f"E:\Code\Projects\Generative_Artworks\Drawings\{artist}_drawing.png")
+
+    # Create an enhancer object and darken the background image by a factor of 0.5
+    enhancer = ImageEnhance.Brightness(background_image)
+    darkened_image = enhancer.enhance(0.25)
 
     # convert the mode of the foreground image to match the mode of the background image
     if foreground_image.mode != background_image.mode:

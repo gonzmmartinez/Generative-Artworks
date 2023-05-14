@@ -40,7 +40,7 @@ def generate_art(path: str,artist_name: str):
     #Generar puntos
     limit = 250
     count = 0
-    while len(points) <= 100:
+    while len(points) <= 200:
         random_point = (random.randint(padding_px, image_size_px - padding_px),
                         random.randint(padding_px, image_size_px - padding_px))
 
