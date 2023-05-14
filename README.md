@@ -1,11 +1,11 @@
 # Index
 1. [Introduction](#introduction)
 
-  1.1 [But... why?](#But...why?)
+  1.1 [But... why?](#Butwhy)
 
 2. [The project](#the_project)
 
-  2.1 [Drawings.py](#drawings)
+  2.1 [Drawing.py](#drawing)
 
   2.2 [GenerativeArtworks.py](#generativeartworks)
 
@@ -19,7 +19,7 @@
 **Generative Artwork** is a Python program that creates unique artworks based on the artists' names from a folder full of songs. The program extracts the names of the artists from the metadata of the audio files and uses them to generate a "trippy" art design along with a random draw. The resulting image is then superimposed over a background image to create a visually stunning artwork.
 
 ## But... why?
-<a id="But... why?"></a>
+<a id="Butwhy"></a>
 
 You must be saying "what? Who in the world downloads their music? Doesn't everyone use streaming services?"" The first answer is "me", and the second answer is "no".
 
@@ -28,7 +28,7 @@ To be clear, a lot of the music I like is not simply on Spotify, as I enjoy list
 Now, the problem lies in the fact that I don't necessarily "like" the song or album covers. In fact the vast majority of the time I simply don't like them and they generate a feeling of "visual inconsistency".
 
 <p align="center">
-  <img src="Anexos/Captura1.jpg">
+  <img src="Anexos/Captura1.JPG">
 </p>
 
 Also, I don't really like to make this kind of decisions, it's just a matter of aesthetics, I can automate the process. So.. yeah, that's the reason.
@@ -40,8 +40,8 @@ Also, I don't really like to make this kind of decisions, it's just a matter of 
 
 Basically the project consists of two parts. One handled exclusively by the Python program, and one "handled" by me, a human being (I think).
 
-## Drawings.py
-<a id="drawings"></a>
+## [Drawing.py](Drawing.py)
+<a id="drawing"></a>
 
 This code generates an art image using random lines and the artist's name written in random positions and font sizes. The image is saved to a file specified by the 'path' argument. The `PIL` library is used to handle image manipulation.
 
@@ -80,5 +80,5 @@ Finally, after a few touches using [Pixlr Batch Editor](https://pixlr.com/es/bat
 That can be placed on each song (also batch editing), using the open source tool [Mp3tag](https://www.mp3tag.de/en/), which I love so much.
 
 <p align="center">
-  <img src="Anexos/Captura2.jpg">
+  <img src="Anexos/Captura2.JPG">
 </p>
